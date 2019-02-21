@@ -35,9 +35,9 @@ echo Fetching CUDA Download URL.
 for /f "tokens=4-5 delims=. " %%i in ('ver') do set VERSION=%%i.%%j
 if "%version%" == "10.0" (
     powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/AlphaAtlas/vs_mxnet_helper_helper/master/CUDA_Win10_URL', 'url.txt')"   
+) ELSE (
+    powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/AlphaAtlas/vs_mxnet_helper_helper/master/CUDA_Win_URL', 'url.txt')"
 )
-powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/AlphaAtlas/vs_mxnet_helper_helper/master/CUDA_Win_URL', 'url.txt')"
-:fetched_url
 set /p URL=<url.txt
 del url.txt
 echo Downloading Nvidia CUDA archive from %URL%...
