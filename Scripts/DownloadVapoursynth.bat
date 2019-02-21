@@ -11,7 +11,6 @@ if %FreeSpace:~0,-6% LEQ 12880 (
     timeout 10
     goto :eof
 )
-rem powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/AlphaAtlas/vs_mxnet_helper_helper/master/Latest_FATPack_URL', 'InstallCUDA.bat')"
 rmdir /s /q download_temp
 cls
 mkdir download_temp
