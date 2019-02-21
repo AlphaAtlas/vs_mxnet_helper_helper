@@ -5,7 +5,7 @@ Get started with neural network image/video processing in Windows, in **one clic
 
 Requirements:
 - A Kepler (600 series+) or better Nvidia GPU. Check what GPU you have with this: https://www.ccleaner.com/speccy/download/portable
-- Plenty of free disk space (at least 10 GB anywhere you want, plus ~2GB in C:/Program Files for CUDA).
+- Plenty of free disk space (at least 10 GB on any drive, plus ~2GB in C:/Program Files for CUDA).
 - An internet connection than can handle multi gigabyte downloads. 
 - Windows 10 (recommended), 8.1, or 7.
 
