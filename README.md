@@ -44,7 +44,9 @@ Known Issues:
 
 - Tons of features are missing *shrug* 
 
+NOTES:
 
+- AMD users can just download the VapourSynth fatpack and run Waifu2X out of the box (for now). 
 
 TODO:
 
