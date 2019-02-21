@@ -27,6 +27,7 @@ if '%errorlevel%' NEQ '0' (
 
 
 rmdir /s /q CUDA_temp
+cls
 mkdir CUDA_temp
 cd CUDA_temp
 echo Fetching CUDA Download URL.
