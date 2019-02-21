@@ -1,5 +1,6 @@
 @echo off
-echo Please give this console window admin rights to install CUDA
+setlocal EnableDelayedExpansion
+echo Please give this console admin rights to install CUDA
 :: BatchGotAdmin
 :-------------------------------------
 REM  --> Check for permissions
@@ -39,7 +40,7 @@ powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.github
 :fetched_url
 set /p URL=<url.txt
 del url.txt
-echo Downloading ~2GB Nvidia CUDA archive from %URL%...
+echo Downloading Nvidia CUDA archive from %URL%...
 powershell -Command "Import-Module BitsTransfer; Start-BitsTransfer %URL% CUDA.exe"
 echo Installing CUDA...
 echo This won't touch your Nvidia graphics driver, make sure you update it or let Windows do it!
@@ -54,19 +55,14 @@ echo Installing CUDNN.
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://github.com/AlphaAtlas/vs_mxnet_helper_helper/raw/master/7za.exe', '7za.exe')"
 7za.exe x cuDNN.tar.bz2
 7za.exe x cuDNN.tar
-robocopy Library "%cuda_path_v10_0%" /e /MOV /XO
-echo cuDNN installed! Cleaining up.
+robocopy Library "%programfiles%\NVIDIA GPU Computing Toolkit\CUDA\v10.0" /e /MOV /XO
+echo cuDNN installed! Cleaning up.
 cd ..
 rmdir /s /q CUDA_temp
 echo Compressing...
-compact /c /s:"%cuda_path%" /i /q
+compact /c /s:"%programfiles%\NVIDIA GPU Computing Toolkit\CUDA\v10.0" /i /q
 echo Done.
+timeout 1
+cls
 echo MXNET WILL NOT RUN UNTIL YOU RESTART YOUR COMPUTER
 pause
-
-
-
-
-
-
-
