@@ -54,6 +54,8 @@ TODO:
 
 - Link all the software in this readme.
 
+- Rename the repos.
+
 - Get the installer to check for an existing CUDA installation. 
 
 - Clean up the offensively hacky neural network parser.
