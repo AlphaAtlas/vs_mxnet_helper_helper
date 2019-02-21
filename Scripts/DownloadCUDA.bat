@@ -61,8 +61,6 @@ cd ..
 rmdir /s /q CUDA_temp
 echo Compressing...
 compact /c /s:"%programfiles%\NVIDIA GPU Computing Toolkit\CUDA\v10.0" /i /q
-echo Done.
-timeout 1
 cls
-echo MXNET WILL NOT RUN UNTIL YOU RESTART YOUR COMPUTER
+echo MXNET MIGHT NOT RUN UNTIL YOU RESTART YOUR COMPUTER
 pause
