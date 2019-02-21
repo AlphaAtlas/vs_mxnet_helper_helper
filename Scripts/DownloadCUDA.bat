@@ -54,7 +54,7 @@ echo Installing CUDNN.
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://github.com/AlphaAtlas/vs_mxnet_helper_helper/raw/master/7za.exe', '7za.exe')"
 7za.exe x cuDNN.tar.bz2
 7za.exe x cuDNN.tar
-robocopy Library "%cuda_path%" /e /MOV /XO
+robocopy Library "%cuda_path_v10_0%" /e /MOV /XO
 echo cuDNN installed! Cleaining up.
 cd ..
 rmdir /s /q CUDA_temp
