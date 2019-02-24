@@ -11,7 +11,7 @@ Requirements:
 
 Instructions: 
 
-- Download this .bat file: *link coming when ready*
+- Download this .bat file: https://github.com/AlphaAtlas/vs_mxnet_helper_helper/releases/download/untagged-f08bd2360dcf69997281/DownloadEverything.bat
 - Put it somewhere you have space.
 - Double click it it.
 - Wait. 
